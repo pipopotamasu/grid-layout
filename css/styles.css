@@ -5,11 +5,14 @@ body {
 .container {
   background: #eee;
   display: grid;
-  /*grid-template-rows: 80px 80px 80px;
-  grid-template-columns: 80px 80px 80px;*/
-  /*grid-template: 80px 80px 80px / 80px 80px 80px;*/
-  /*grid-template: repeat(3, 80px) / repeat(3, 80px);*/
-  grid-template: repeat(3, 80px) / repeat(auto-fill, 80px);
+  grid-template-rows: 80px 80px 80px;
+  grid-template-columns: 80px 80px 80px;
+  /*grid-template-columns: 50% 80px 80px;*/
+  grid-template-columns: 1fr 1fr 2fr;
+  /*grid-row-gap: 10px;
+  grid-column-gap: 10px;*/
+  /*grid-gap: 10px 10px;*/
+  grid-gap: 10px;
 }
 .item-1 {
   background: hsl(300, 80%, 30%);
