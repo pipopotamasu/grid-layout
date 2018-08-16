@@ -5,25 +5,37 @@ body {
 .container {
   background: #eee;
   display: grid;
-  grid-template-rows: 80px 80px 80px;
-  grid-template-columns: 80px 80px 80px;
+  /*grid-template-rows: 80px 80px 80px;
+  grid-template-columns: 80px 80px 80px;*/
+  /*grid-template-areas:
+    "header header header"
+    "main   main   sidebar"
+    "footer footer footer";*/
+  /*grid-template-areas:
+    "header header header"
+    "main   .      sidebar"
+    "footer footer footer";*/
+  grid-template:
+    "header header header header" 80px
+    "main   .      sidebar sidebar" 80px
+    "footer footer footer footer" 80px
+    / 80px 80px 80px 80px;
 }
 .item-1 {
   background: hsl(300, 80%, 30%);
-  grid-row: 3 / 4;
-  grid-column: 2 / 4;
-  z-index: 1;
+  grid-area: header;
 }
 .item-2 {
   background: hsl(300, 80%, 40%);
+  grid-area: main;
 }
 .item-3 {
   background: hsl(300, 80%, 50%);
+  grid-area: sidebar;
 }
 .item-4 {
   background: hsl(200, 80%, 30%);
-  grid-row: 1 / 4;
-  grid-column: -1 / -2;
+  grid-area: footer;
 }
 .item-5 {
   background: hsl(200, 80%, 40%);
